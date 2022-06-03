@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会員登録</title>
+<style>
+table {
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+tr:hover {
+    background: #cae4ee;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+</style>
+<link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+<h1>会員登録</h1>
+<table>
+    <tr>
+        <th>お名前</th>
+        <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+        <th>メールアドレス</th>
+        <td><input type="text" name="mail"></td>
+    </tr>
+    <tr>
+        <th>生年月日</th>
+        <td><input type="date" name="month"></td>
+    </tr>
+    <tr>
+        <th>会員種別</th>
+        <td>
+            <label>
+            <input type="radio" name="member" value="1" checked>通常会員
+        </label>
+        <label>
+            <input type="radio" name="member" value="2">プレミアム会員
+        </label>
+        </td>
+    </tr>
+    <tr>
+        <th>利用するサービス</th>
+        <td>
+            <label>
+            <input type="checkbox"> マイ・フォト
+        </label>
+        <label>
+            <input type="checkbox">マイ・ミュージック
+        </label>
+        <label>
+            <input type="checkbox">マイ・ビデオ
+        </label>
+        </td>
+    </tr>
+    <tr>
+<th>好きなサッカーチーム</th>
+<td>
+    <label>
+        <input type="checkbox">北海道コンサドーレ札幌
+    </label>
+    <label>
+    <input type="checkbox">ベガルタ仙台
+</label>
+<label>
+    <input type="checkbox">横浜FC
+</label>
+<label >
+    <input type="checkbox">横浜マリノス
+</label>
+<label>
+    <input type="checkbox">川崎フロンターレ
+</label>
+</td>
+    </tr>
+    <tr>
+        <th>好きな十二支</th>
+        <td><select name="select1" size="12">
+            <option value="animal1">ねずみ</option>
+            <option value="animal2">うし</option>
+            <option value="animal3">とら</option>
+            <option value="animal4">うさぎ</option>
+            <option value="animal5">竜</option>
+            <option value="animal5">蛇</option>
+            <option value="animal5">馬</option>
+            <option value="animal5">羊</option>
+            <option value="animal5">猿</option>
+            <option value="animal5">鳥</option>
+            <option value="animal5">犬</option>
+            <option value="animal5">イノシシ</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+<th>好きな関東圏</th>
+<td><select name="rejon">
+<option value="kanagawa">神奈川</option>
+
+
+</select>
+
+</td>
+
+    </tr>
+    <tr>
+        <th>お支払い方法</th>
+        <td><select name="pay" >
+            <option value="マイ・ペイメント">マイ・ペイメント</option>
+            <option value="クレジットカード">クレジットカード</option>
+            <option value="銀行振込">銀行振込</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <th>備考</th>
+        <td>
+            <textarea name="item" cols="50" rows="20"></textarea>
+        </td>
+    </tr>
+</table>
+<p>
+    <form action="" method="post">
+    <input type="submit" value="送信">
+</form>
+</p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>フォーム</title>
+    </head>
+    <link rel="stylesheet" href="css/style2.css">
+    <body>
+        <h1>お問い合わせフォーム</h1>
+        <form action="/register/process" method="POST">
+        <h2>新規登録</h2>
+        <p>氏名: <input type="text"name="user"
+            placeholder="山田"></p>
+        <p>メール:<input type="text"name="age"
+            value="23"></p>
+            <p>パスワード<input type="password"name="pass">
+            <input type="submit"value="送信"></p>
+
+            <p>メールマガジン
+            <input type="radio" name="magazine" value="1" checked>希望する
+            <input type="radio" name="magazine" value="2">希望しない</p>
+            
+            <p>生年月日:
+                <input type="date" value="1000-10-10">
+            </p>
+
+            <p>起床時間
+                <input type="time" value="06:30">
+            </p>
+
+            <p>好きな色
+                <input type="color" value="#00ff00">
+            </p>
+
+            <p>メールアドレス
+                <input type="email" name="email">
+            </p>
+
+            <p>パスワード
+                <input type="password" name="pass">
+            </p>
+
+            <p>健康度合い
+                悪い
+                <input type="range" min="0" max="100" value="25">
+                良い
+            </p>
+
+            <p>
+                <input type="file">
+            </p>
+
+            <p>
+                <input type="range" min="23" max="200" step="12">
+            </p>
+
+            <input type="submit" value="問い合わせる">
+
+        </form>
+    </body>
+</html>

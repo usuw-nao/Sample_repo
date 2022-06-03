@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.kanto{
+    background: lightskyblue;
+}
+
+.kansai{
+    background: lightgreen;
+}
+
+.weather{
+    font-weight: bold;
+    font-size: 24px;
+    color: mediumblue;
+}
+a:hover{
+    color: darkturquoise;
+}
+a:visited{
+    color: violet;
+}
