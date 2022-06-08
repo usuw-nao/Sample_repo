@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認</title>
+</head>
+<body>
+    <script>
+        class User{
+            name;
+            age;
+
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            showInfo(){
+                console.log(this.name +"("+this.age+")");
+            }
+        }
+
+        const u1 =new User("河原森林正太郎", 34);
+        const u2=new User("関数太郎",34);
+        const u3=new User("Apple.String",90);
+        console.log(u1);
+        console.log(u2);
+        console.log(u3);
+        u1.showInfo();
+        u2.showInfo();
+        u3.showInfo();
+
+        class Score{
+            math;
+            scient;
+            lang;
+            constructor(math,scient,lang){
+                this.math=math;
+                this.scient=scient;
+                this.lang=lang;
+            }
+            showInfo(){
+                console.log(this.math+this.scient+this.lang);
+            }
+
+        }
+    </script>
+</body>
+</html>

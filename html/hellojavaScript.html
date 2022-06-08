@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptサンプル</title>
+
+</head>
+<body>
+    <h1 onclick="alert(123)">JavaScript</h1>
+
+    <button id="btn1">ボタン1</button>
+    <button id="btn2">ボタン2</button>
+    <script>
+        const user ={
+            name:"勅使河原総一郎",
+            age:88,
+            jyu:"寿限無寿限無孤高の擦り切れ回砂利そうなの風来松水雷松食う寝るところに来るところ矢倉浩二難工事",
+            sayHi: function(){
+                console.log("ニイハオ"+this.name+ "シェイシェイ");
+            },
+            sayAge: function(){
+                console.log("儂は"+this.age+"才の長寿じゃ");
+            },
+            sayJyu: function(){
+                console.log("この子の名前は"+this.jyu);
+
+            }
+        };
+        user.sayHi();
+        user.sayAge();
+        user.sayJyu();
+
+        function calcBMI(height, weight){
+            const bmi =weight/(height*height)
+                return bmi;
+        }
+
+        const bmi1 = calcBMI(1.715,69.6);
+        console.log('BMI1=' + bmi1);
+        const bmi2=calcBMI(1.6, 58.0);
+        console.log("BMI2="+bmi2);
+
+        console.log(5+3);
+        console.log(5/3);
+        console.log("私は"+"誰でしょう");
+
+        const fruits = ["りんご","バナナ","ぶどう"];
+
+        console.log(fruits[1]);
+        fruits[1]="みかん";
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+
+        const fruits2 =["りんご","ばなな","みかん"];
+        for(let i =0; i<fruits2.length;i++){
+            console.log(fruits2[i]);
+        }
+
+        const vegitable=["ほうれんそう","小松菜","水菜"];
+        for(let item of vegitable){
+            console.log(item);
+        }
+
+        let price;
+        price= 198;
+        let item="りんご";
+        item="札幌";
+        item=1998;
+        item=50.7;
+        const name ="川崎フロンターレ";
+        const price2=300;
+
+        console.log(`コンサドーレ札幌と${name}`);
+        console.log(`観戦料は${price2}`);
+
+        const btn1 =
+        document.getElementById('btn1');
+        btn1.addEventListener('click',(e) => {
+        alert('こんにちは');
+        });
+        const btn2=
+        document.getElementById('btn2');
+        btn2.addEventListener('click',(e) => {
+        alert('さようなら');
+        });
+    </script>
+
+    <script src="myscript.js"></script>
+        <noscript>
+        <h1>JavaScriptをゆうこうにしてください</h1>
+    </noscript>
+</body>
+</html>
