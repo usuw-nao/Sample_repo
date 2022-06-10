@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //入力チェックと送信前の確認
+    <form action="process.php"
+    method="post">
+<p>年齢:
+    <input id="age" type="number">
+</p>
+
+<input type="submit">
+</form>
+
+<script src="/js/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+
+        $('form').submit(function(){
+              const age = $('#age').val();
+              if(age<0){
+                  return false;
+              }
+
+              return confirm('本当に送信しますか？');
+        });
+    });
+</script>
+
+</body>
+</html>

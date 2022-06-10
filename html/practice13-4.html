@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>練習13-4</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+    <img src="/images/cat.jpg">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const windowWidth =$(window).width();
+            const windowHeight =$(window).height();
+            console.log('ウインドウの幅:'+windowWidth);
+            console.log('ウインドウの高さ:'+windowHeight);
+
+            $('img').width(windowWidth);
+            $('img').height(windowHeight);
+            $('p').css('display', 'none');
+
+        });
+    </script>
+
+
+</body>
+</html>

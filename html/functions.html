@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数</title>
+</head>
+<body>
+    <button>H e l l o  </button>
+    <button>こんにちは  </button>
+    <button>ニイハオ    </button>
+    <button>ボンジュール</button>
+    <script>
+const buttons = document.querySelectorAll("button");
+buttons.forEach((btn)=>{
+    btn.addEventListener("click",(e)=>{
+        alert(e.target.innerText);
+    });
+});
+
+    </script>
+    <h1>FADEOUT</h1>
+    <p>5秒後にアラートが表示されます</p>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        //実際に行いたい処理
+        $('h1').fadeOut();
+    });
+        //関数の定義
+        const myAlert = (messages)=>{
+            for(let msg of messages){
+                alert(msg);
+            }
+        };
+        //第一引数コールバック関数
+        //第二引数時間
+        setTimeout(() =>{
+            const messages=["こんにちは","元気ですか","私は元気です"];
+            myAlert(messages);
+        }
+        ,7000);
+    </script>
+</body>
+</html>

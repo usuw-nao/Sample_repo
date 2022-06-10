@@ -3,6 +3,10 @@
 /* -------------------------------------
   共通／全体
   ------------------------------------*/
+  headr{
+    background:pink;
+  }
+
 body {
   font-family: "メイリオ", sans-serif;
   color: #333333;
@@ -27,5 +31,6 @@ body {
   フッター
   ------------------------------------*/
 footer {
+  background: #45aa0f;
   text-align: center;
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>練習13-2</title>
+</head>
+<body>
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('a').attr('href','https://www.google.com/');
+        const altText=$('img').attr('alt');
+        console.log(altText);
+        
+        const fileName =$('#question').attr('data-img');
+        $('img').attr('src','/images'+ fileName);
+    });
+</script>
+</body>
+</html>
