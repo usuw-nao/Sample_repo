@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+header{
+    background-color: #ffffff;
+}
+main{
+    background-color: rgb(202, 247, 208);
+}
+footer{
+    background-color: aqua;
+}
+.animal{
+    background-color: rgb(142, 200, 255);
+}

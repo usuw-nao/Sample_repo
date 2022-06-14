@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ユーザー登録 | MySNS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">MySNS</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="offset-lg-2 col-lg-8">
+      <h1>ユーザー登録</h1>
+
+      <div class="alert alert-info">
+        下記の内容を入力して、「登録する」ボタンを押してください。
+      </div>
+
+      <form action="registerDone.html">
+        <div class="mb-3">
+          <label for="lastName" class="form-label">氏名 (必須)</label>
+          <div id="error-name" class="alert alert-danger error-message">氏名を入力してください。</div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="姓">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="名">
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="login" class="form-label">ログインID (必須)</label>
+          <div id="error-login" class="alert alert-danger error-message">ログインIDを入力してください。</div>
+          <input type="text" class="form-control" id="login" name="login" placeholder="ログインID">
+        </div>
+        <div class="mb-3">
+          <label for="pass" class="form-label">パスワード (必須)</label>
+          <div id="error-pass" class="alert alert-danger error-message">パスワードを入力してください。</div>
+          <input type="password" class="form-control" id="pass" name="pass" placeholder="パスワード">
+        </div>
+        <div id="error-terms" class="alert alert-danger error-message">利用規約に同意してください。</div>
+        <div class="form-check mb-4">
+          <input type="checkbox" id="terms" name="terms" class="form-check-input">
+          <label for="terms" class="form-check-label">利用規約に同意する (必須)</label>
+        </div>
+        <div>
+          <input type="submit" class="btn btn-primary form-control" value="登録する">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('form').submit(function() {
+        $('.error-message').hide();
+        let result = true;
+        const lastName = $('#lastName').val();
+        if (lastName == '') {
+            result = false;
+            $('#error-name').show();
+        }
+        const firstName = $('#firstName').val();
+        if (firstName == '') {
+            result = false;
+            $('#error-name').show();
+        }
+        const login = $('#login').val();
+        if (login == '') {
+            result = false;
+            $('#error-login').show();
+        }
+        const pass = $('#pass').val();
+        if (pass == '') {
+            result = false;
+            $('#error-pass').show();
+        }
+        const terms = $('#terms').prop('checked');
+        if (!terms) {
+            result = false;
+            $('#error-terms').show();
+        }
+        return result;
+    });
+});
+</script>
+</body>
+</html>
